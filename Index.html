@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipper AI</title>
+    
+    <!-- PWA Config (Tambahkan di sini) -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d0d0d">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>🎬 Clipper AI</h1>
+    <p class="subtitle">US English Gaming Hook Generator</p>
+
+    <label class="upload">
+        📁 Choose Video
+        <input type="file" id="videoInput" accept="video/*">
+    </label>
+
+    <div class="video-box">
+        <video id="video" controls playsinline muted></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Status Indikator Proses -->
+    <div id="statusText" class="status-box">Ready to load video</div>
+
+    <div class="info">
+        <div class="card">
+            <span>🎣 HOOK</span>
+            <strong id="hook">Waiting...</strong>
+        </div>
+
+        <div class="card">
+            <span>📰 HEADLINE</span>
+            <strong id="headline">Waiting...</strong>
+        </div>
+
+        <div class="card">
+            <span>💥 PUNCHLINE</span>
+            <strong id="punchline">Waiting...</strong>
+        </div>
+    </div>
+
+    <button id="exportBtn" disabled>
+        🎥 Export Video with Text Overlay
+    </button>
+
+    <a id="downloadBtn" class="download" hidden>
+        ⬇️ Download Video
+    </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
